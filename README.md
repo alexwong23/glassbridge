@@ -1,4 +1,4 @@
-## Talent Development Programme Website
+## GlassBridge Website
 
 ## External help tools
 Sweet Alert 2
@@ -8,6 +8,3 @@ Images from Singapore Tourism Board Site, etc.
 ## Copyright and License
 This website is based on the [Bootstrap](http://getbootstrap.com/) framework.
 Copyright 2013-2016 Blackrock Digital LLC.
-# talentdev
-# glassbridge
-# glassbridge
