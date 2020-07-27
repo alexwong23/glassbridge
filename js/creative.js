@@ -46,7 +46,7 @@
   }, 300)
 
   // Get the form.
-  var form = $('#ajax-contact')
+  var form = $('#fs-frm')
 
   // function validate email regex
   function validateEmail (email) {
@@ -78,39 +78,41 @@
         confirmButtonColor: 'rgb(221, 75, 57)'
       })
     } else {
-      // Combine the form data into a single object.
-      var formData = {
-        name: $('#contactname').val(),
-        email: $('#contactemail').val(),
-        phone: $('#contactphone').val(),
-        message: $('#contactmessage').val()
-      }
-      $.ajax({
-        url: 'https://formspree.io/support@talentdevelopment.zendesk.com',
-        method: 'POST',
-        data: formData,
-        dataType: 'json'
-      }).done(function (response) {
-        swal({
-          title: 'Success',
-          text: 'We will get back to you within 2 business days.',
-          imageUrl: 'sweetalert/swal2-success.png',
-          confirmButtonColor: 'rgb(38, 166, 91)'
-        })
-        // reset form
-        $('#contactname').val('')
-        $('#contactemail').val('')
-        $('#contactphone').val('')
-        $('#contactmessage').val('')
-      }).fail(function (response) {
-        swal({
-          title: 'Error!',
-          text: 'Please refresh the page and try again. If the error persists, please contact us directly. Sorry for any inconvenience caused.',
-          imageUrl: 'sweetalert/swal2-error.png',
-          timer: 5000,
-          confirmButtonColor: 'rgb(221, 75, 57)'
-        })
-      })
+
+      // // no longer using AJAX form!
+      // // Combine the form data into a single object.
+      // var formData = {
+      //   name: $('#contactname').val(),
+      //   email: $('#contactemail').val(),
+      //   phone: $('#contactphone').val(),
+      //   message: $('#contactmessage').val()
+      // }
+      // $.ajax({
+      //   url: "https://formspree.io/alexwongweilun@hotmail.co.uk",
+      //   method: 'POST',
+      //   data: formData,
+      //   dataType: 'json'
+      // }).done(function (response) {
+      //   swal({
+      //     title: 'Success',
+      //     text: 'We will get back to you within 2 business days.',
+      //     imageUrl: 'sweetalert/swal2-success.png',
+      //     confirmButtonColor: 'rgb(38, 166, 91)'
+      //   })
+      //   // reset form
+      //   $('#contactname').val('')
+      //   $('#contactemail').val('')
+      //   $('#contactphone').val('')
+      //   $('#contactmessage').val('')
+      // }).fail(function (response) {
+      //   swal({
+      //     title: 'Error!',
+      //     text: 'Please refresh the page and try again. If the error persists, please contact us directly. Sorry for any inconvenience caused.',
+      //     imageUrl: 'sweetalert/swal2-error.png',
+      //     timer: 5000,
+      //     confirmButtonColor: 'rgb(221, 75, 57)'
+      //   })
+      // })
     }
   })
 })(jQuery) // End of use strict
